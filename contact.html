@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FacAd page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="custom.css">
+   <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
+
+body {
+    background-color: #00BFFF;
+}
+.container
+{
+	background: #F2F2F2;
+	//height : 500px;
+}
+.jumbotron
+{
+	
+    width: 85%;
+	min-height: 40px;
+	background: #0A122A;
+}
+h2 {
+  font-family: 'ConyRegular', Arial, sans-serif, !important;
+  color:white;
+}
+p1
+{
+font-family: 'ConyRegular', Arial, sans-serif, !important;
+  color:white;
+}
+h3
+{
+	font-family: 'monospace',monospace;
+	
+}
+h4{
+	font-family: 'ConyRegular', Arial, sans-serif, !important;
+  color:white;
+}
+.voffset2 { margin-top: 10px; }
+.container-fluid
+{
+	width:70%;
+	min-height: 60%;
+	align: right;
+	background: #F3F781;
+}
+.right
+{
+align:right;
+}
+
+.navbar-text > li{
+  padding-left:40px;
+  padding-right:40px;
+}
+.fa-facebook {
+	background:#3b5998
+} 
+.fa-linkedin {
+	background:#007bb6
+}
+.fa-twitter {
+	background:#00aced
+}
+.google-plus {
+	background:#dd4b39
+}
+
+ul {
+	overflow: auto;
+}
+
+ul li {
+	list-style-type: none;
+	float: left;
+}
+
+ul li a i {
+	background: #205D7A;
+	color: #fff;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	font-size: 25px;
+	text-align: center;
+	margin-right: 10px;
+	padding-top: 15%;
+}
+</style>
+<script>
+function read()
+{
+document.write("Hello World!");
+}
+</script>
+  </head>
+
+<body>
+
+<div class="container">
+  <div class="jumbotron col-md-10 col-md-offset-1">
+    <h2 align="center">Mtech-1 CSE Fac-Ad page </h2>
+    <h4 class="p1" align="right">Indian Institute of Technology,Bombay</h4> 
+  </div>
+  <div class="row">
+	<div class="col-md-8 col-md-offset-2">
+	<a class="btn btn-primary col-sm-3" href="index.php" role="button">Home</a>
+	<a class="btn btn-primary col-sm-3" href="about.html" role="button">About</a>
+	<a class="btn btn-primary col-sm-3" href="notice.php" role="button">Notices</a>
+	<a class="btn btn-primary col-sm-3" href="contact.html" role="button">Contact me </a>
+	</div>
+	<br><br>
+		<div class="col-md-12 " >
+		<br>
+			<p align="center" style="margin-top: 0px;">
+			<i>
+				Share your views and suggestion to me...</i>
+				<span style = "font-size:50px;color: #800000;"><b>get in touch</b>
+				</span>
+			</p>
+		</div>
+		
+		<div class="col-md-12 left">
+			<h4 style="color: blue;">Drop me a message</h2>
+				<form id="form" action="mail.php" method="post">
+				 <table id="frm">
+				 <tr><td><label for="name" class="name">Name: </label></td>
+					 <td><input type="text" name="name" id="name" class="text " value="" /></td>
+					</tr> 
+					<tr><td><label for="email" class="email">Email: </label></td>
+						<td><input type="email" name="email" id="email" class="text " value="" /></td>
+					</tr> 
+					<tr><td><label for="message" class="message">Message: </label></td>
+					<td><textarea name="message" id="message" class="textarea "></textarea></td>
+					</tr> 
+					<tr>
+						<td></td>
+						<td><input type="submit" name="submit" value="SEND" id="submit" class="button" /></td>
+					</tr>
+				</form>
+			</div>
+		
+		<div class=".col-md-4 left">
+			
+					<div class="navbar-text pull-right">
+					<p>
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+						&nbsp; &nbsp; faculty@cse.iitb.ac.in <br >
+						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+						&nbsp; &nbsp; (+91) 7045800515
+					</p>
+					<h4 style="color: blue; ">You can also reach to me at:</h4>
+					
+					<ul class="nav navbar-nav">
+					
+				<li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+				<li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i> </a></li>
+				<ul>
+				</div>
+		</div>
+		
+			
+	
+		
+	
+	</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+.right
+{
+	width: 235px; 
+	float: right;
+	display: inline;
+	margin-top: 17px; 
+	position: relative;
+}
+
+p
+{
+	margin: 0 px;
+	padding: 0 px;
+}
+
+#links
+{
+	margin-top: 0 px;
+	padding: 0 px;
+	float: right;
+	display: inline;
+}
+
+.right a {
+	color: #C1DAFF; 
+	text-decoration: none;
+}
+.right a:hover {
+	border-bottom: 1px dotted #FFF;
+}
+
+.right ul.contactinfo {
+	
+	padding: 0; 
+	list-style: none;
+}
+.right ul.contactinfo li {
+	height: 30px;
+	padding-left: 33px;
+	float: right:
+}
+
+tr > td
+{
+  padding-bottom: 1em;
+}
+
+img 
+{
+	height: 30px;
+	width: 30px;
+}
+
+ul, li
+{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}

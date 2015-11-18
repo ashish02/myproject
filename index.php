@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>FacAd page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="custom.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style>
+
+body {
+   background-image:url('2.jpg');
+}
+.container
+{
+	background: #F2F2F2;
+	height : auto;
+	width:90%
+}
+.jumbotron
+{
+	
+    width: 65%;
+	max-height: 150px;
+	
+	background-image:url('1.jpg');
+}
+h2 {
+  font-family: 'ConyRegular', Arial, sans-serif, !important;
+  color:white;
+}
+p1
+{
+font-family: 'ConyRegular', Arial, sans-serif, !important;
+  color:white;
+}
+h3
+{
+	font-family: 'monospace',monospace;
+}
+h4{
+	font-family: 'ConyRegular', Arial, sans-serif, !important;
+  color:white;
+}
+.voffset2 { margin-top: 10px; }
+.container-fluid
+{
+	width:70%;
+	min-height: 60%;
+	align: right;
+	background: #F3F781;
+}
+.right
+{
+align:right;
+}
+.img {
+    background-image: url('notice.jpg');
+	float:right;
+}
+
+.popup {
+margin-left: 15%; 
+margin-top: 0%; 
+padding-top: 10px; 
+width: 100%; 
+height: 150px; 
+position: absolute; 
+width:75%; 
+
+z-index: 9;  
+}
+
+.navbar-nav > li{
+  padding-left:40px;
+  padding-right:40px;
+}
+</style>
+<script>
+function hide()
+{
+	document.getElementById('login').style.display = "none";
+}
+function login()
+{
+	document.getElementById('login').style.display = "block";
+	document.getElementById("page").style.opacity = "0.2";
+	
+}
+function logout()
+{
+	document.getElementById('login').style.display = "none";
+	document.cookie = "";
+	
+}
+
+function validate()
+ {
+if (document.getElementById('login-username').value == "" || document.getElementById('login-password').value == "") 
+{
+alert("Fill All Fields !");
+
+}
+else if(document.getElementById('login-username').value != "admin" || document.getElementById('login-password').value != "root")
+{
+alert("Incorrect Credentials !");
+
+}
+ else 
+{
+	document.cookie = "admin";
+	document.getElementById("page").style.opacity = "1";
+	document.getElementById('login').style.display = "none";
+	
+}
+ }
+function Checkuser()
+{
+	if(document.cookie=="admin")
+	{
+		window.location="notice.php";
+	}
+	else
+	{
+		window.location="noticeStu.php";	
+	}
+}
+</script>
+  </head>
+
+<body onload=hide()>
+
+<div class="popup" id="login" >  
+<br><br>  
+        <div id="loginbox" style="margin-top:60px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+          <div class="panel panel-info" >
+           <div class="panel-heading">
+               <div class="panel-title">Sign In</div>
+                </div>     
+
+                <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                        <form id="loginform" class="form-horizontal" role="form" >
+                                    
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">                                        
+                                    </div>
+                                
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                                    </div>
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                      <a id="btn-login" href="#" class="btn btn-success" onClick=validate()>Login  </a>
+                                </div>
+                                </div>    
+                            </form>     
+
+
+
+                        </div>                     
+                    </div>  
+        </div>
+		</div>
+
+
+
+<div class="container" id="page">
+  <div class="jumbotron col-md-10 col-md-offset-2">
+    <h2 align="center">Mtech-1 CSE Fac-Ad page </h2>
+    <h4 class="p1" align="right">Indian Institute of Technology, Bombay</h4> 
+</div>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary  right" onClick=login()>    login   </button>
+&nbsp;&nbsp;<button type="button" class="btn btn-primary right" onClick=logout()>    logout   </button>
+
+  <div class="row">
+	<div class="col-md-8 col-md-offset-2">
+	<nav class="navbar navbar-inverse" width="80%">
+	 <ul class="nav navbar-nav">
+	 <li class="active"><a href="index.php" role="button">Home</a>
+	<li><a  href="about.html" role="button">About</a>
+	<li><a  onClick=Checkuser() role="button">Student Center</a>
+	<li><a  href="contact.html" role="button">Contact me </a>
+	 </ul>
+	 </nav>
+	<br><br>
+	</div>
+    <div class="col-md-8">
+      <h3>About me</h3>
+      <p color="black">Education ----------------------------------------------------------<br>------------------------<br></p>
+	  <p>Area of Interest ----------------------------------------------------------------------<br></p>
+		<p>Current Research work ----------------------------------------------------------------<br></p>
+    </div>
+     
+	<div class="col-md-4 right">
+	
+	
+	<br><br>
+		<div class="container-fluid img">        
+	  <form >
+	  <br><br><br>
+	  <?php
+	  
+	  $fp = fopen("updateSubject.txt", "r");
+	  echo "<ul>";
+	if ($fp) 
+	{
+    while (($line = fgets($fp, 4096)) !== false) {
+        echo "<li><font size=\"3\" color=\"black\">$line</font></li><br>";
+    }
+    if (!feof($fp)) {
+        echo "Error: unexpected fgets() fail\n";
+    }
+    fclose($fp);
+	 echo "</ul>";
+}
+	  ?>
+		</form>
+		</div>
+	</div>
+  </div>
+
+</div>
+
+
+
+
+</body>
+</html>
